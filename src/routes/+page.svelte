@@ -1,1 +1,7 @@
-<h1>You are using the o7 stack</h1>
+<script lang="ts">
+	import { trpc } from '$lib/trpc';
+
+	const res = trpc.greeting.query({ name: 'gneiru' });
+</script>
+
+<h1>{$res.data}</h1>
